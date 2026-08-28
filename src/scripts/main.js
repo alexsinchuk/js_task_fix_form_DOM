@@ -1,14 +1,11 @@
 'use strict';
 
+const inputs = [document.querySelectorAll('input')];
 
-const form = document.querySelector('form');
-const inputs = [...form.querySelectorAll('input')];
-
-inputs.forEach(input => {
+inputs.forEach((input) => {
   const label = document.createElement('label');
 
-  const fieldName =
-    input.name[0].toUpperCase() + input.name.slice(1);
+  const fieldName = input.name[0].toUpperCase() + input.name.slice(1);
 
   label.classList.add('field-label');
   label.setAttribute('for', input.id);
@@ -18,4 +15,3 @@ inputs.forEach(input => {
 
   input.parentElement.appendChild(label);
 });
-

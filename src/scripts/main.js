@@ -3,7 +3,7 @@
 const forms = document.querySelectorAll('form');
 const inputs = [];
 
-forms.forEach(form => {
+forms.forEach((form) => {
   inputs.push(...form.querySelectorAll('input'));
 });
 
@@ -18,5 +18,5 @@ inputs.forEach((input) => {
 
   input.placeholder = fieldName;
 
-  input.parentElement.appendChild(label);
+  input.parentElement.insertBefore(label, input);
 });
